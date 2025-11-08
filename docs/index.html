@@ -55,25 +55,6 @@
       </section>
       <section>
 <style>
-  .profile-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 16px 0 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    margin-bottom: 18px;
-  }
-
-  .profile-info span {
-    color: #2a2a2a;
-    font-weight: 500;
-    background: rgba(0, 0, 0, 0.04);
-    padding: 6px 12px;
-    border-radius: 8px;
-    margin-bottom: 6px;
-  }
-
   .contact-hero {
     display: flex;
     flex-wrap: wrap;
@@ -85,69 +66,70 @@
 
   .contact-hero a {
     text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    border: 1px solid transparent;
+  }
+
+  /* 전화 / 이메일: 하늘색 유지 */
+  .contact-hero a.default {
     color: #3a7bd5;
-    font-weight: 500;
-    background: rgba(58, 123, 213, 0.08);
-    padding: 6px 12px;
-    border-radius: 999px;
-    transition: background 0.2s ease;
+    background: rgba(58, 123, 213, 0.10);
+    border-color: rgba(58, 123, 213, 0.28);
+  }
+  .contact-hero a.default:hover {
+    background: rgba(58, 123, 213, 0.18);
   }
 
-  .contact-hero a:hover {
-    background: rgba(58, 123, 213, 0.16);
+  /* 유튜브: 밝은 레드톤 배경 + 흰색 글씨 */
+  .contact-hero a.youtube {
+    color: #ffffff;
+    background: #ff6659;  /* 유튜브 느낌의 부드러운 밝은 레드 */
+    border-color: #ff8a80;
+  }
+  .contact-hero a.youtube:hover {
+    background: #ff7b70;
   }
 
-  .extra-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 16px;
-    margin-top: 16px;
+  /* 깃허브: 따뜻한 주황 계열 */
+  .contact-hero a.github {
+    color: #ef6c00;
+    background: rgba(255, 183, 77, 0.18);
+    border-color: rgba(255, 167, 38, 0.35);
+  }
+  .contact-hero a.github:hover {
+    background: rgba(255, 183, 77, 0.28);
+    color: #e65100;
   }
 
-  .extra-buttons a {
-    text-decoration: none;
-    color: #2e7d32; /* 살짝 밝은 초록 */
-    font-weight: 400; /* 진하기 완화 */
-    background: rgba(129, 199, 132, 0.25); /* 부드러운 연초록 */
-    padding: 6px 12px;
-    border-radius: 999px;
-    transition: all 0.25s ease;
-    border: 1px solid rgba(129, 199, 132, 0.5);
+  /* 링크드인: 인디고 계열 */
+  .contact-hero a.linkedin {
+    color: #283593;
+    background: rgba(63, 81, 181, 0.14);
+    border-color: rgba(63, 81, 181, 0.38);
   }
-
-  .extra-buttons a:hover {
-    background: rgba(129, 199, 132, 0.4);
-    color: #1b5e20;
+  .contact-hero a.linkedin:hover {
+    background: rgba(63, 81, 181, 0.22);
+    color: #1f2a6b;
   }
 
   @media (max-width: 640px) {
-    .profile-info, .contact-hero, .extra-buttons {
-      margin-bottom: 16px;
-    }
-    .profile-info span,
-    .contact-hero a,
-    .extra-buttons a {
+    .contact-hero a {
       padding: 6px 10px;
       font-size: 14px;
     }
   }
 </style>
 
-<div class="profile-info">
-  <span>MBTI: INTJ</span>
-  <span>Year of Birth: 1991</span>
-  <span>Location: Seocho-gu, Gangnam City</span>
-</div>
-
 <div class="contact-hero">
-  <a href="tel:010********">📞 010-5583-****</a>
-  <a href="mailto:ukairia777@gmail.com">✉️ ukairia777@gmail.com</a>
-  <a href="https://www.youtube.com/@nlp8437" target="_blank">개인 유튜브</a>
-  <a href="https://github.com/ukairia777" target="_blank">개인 깃허브</a>
-  <a href="https://www.linkedin.com/in/won-jun-yoo-839273170/" target="_blank">링크드인</a>
+  <a href="tel:010********" class="default">📞 010-5583-****</a>
+  <a href="mailto:ukairia777@gmail.com" class="default">✉️ ukairia777@gmail.com</a>
+  <a href="https://www.youtube.com/@nlp8437" target="_blank" class="youtube">Youtube</a>
+  <a href="https://github.com/ukairia777" target="_blank" class="github">Github</a>
+  <a href="https://www.linkedin.com/in/won-jun-yoo-839273170/" target="_blank" class="linkedin">Linkedin</a>
 </div>
-</section>
 
 <section>
   <h2>Authored E-Books<span class="period-mark">.</span></h2>
