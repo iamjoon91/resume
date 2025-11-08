@@ -55,6 +55,25 @@
       </section>
       <section>
 <style>
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px 0 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 18px;
+  }
+
+  .profile-info span {
+    color: #2a2a2a;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+  }
+
   .contact-hero {
     display: flex;
     flex-wrap: wrap;
@@ -66,27 +85,27 @@
 
   .contact-hero a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     padding: 6px 12px;
     border-radius: 999px;
     transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
     border: 1px solid transparent;
   }
 
-  /* 전화 / 이메일: 하늘색 유지 */
+  /* 기본 버튼 (전화, 이메일) */
   .contact-hero a.default {
     color: #3a7bd5;
-    background: rgba(58, 123, 213, 0.10);
-    border-color: rgba(58, 123, 213, 0.28);
+    background: rgba(58, 123, 213, 0.08);
+    border-color: rgba(58, 123, 213, 0.25);
   }
   .contact-hero a.default:hover {
-    background: rgba(58, 123, 213, 0.18);
+    background: rgba(58, 123, 213, 0.16);
   }
 
-  /* 유튜브: 밝은 레드톤 배경 + 흰색 글씨 */
+  /* 유튜브: 밝은 레드톤 배경 + 흰색 글씨 (진한빨강 금지) */
   .contact-hero a.youtube {
     color: #ffffff;
-    background: #ff6659;  /* 유튜브 느낌의 부드러운 밝은 레드 */
+    background: #ff6659;
     border-color: #ff8a80;
   }
   .contact-hero a.youtube:hover {
@@ -115,13 +134,48 @@
     color: #1f2a6b;
   }
 
+  .extra-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px;
+    margin-top: 16px;
+  }
+
+  .extra-buttons a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 400;
+    background: rgba(129, 199, 132, 0.25);
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: all 0.25s ease;
+    border: 1px solid rgba(129, 199, 132, 0.5);
+  }
+
+  .extra-buttons a:hover {
+    background: rgba(129, 199, 132, 0.4);
+    color: #1b5e20;
+  }
+
   @media (max-width: 640px) {
-    .contact-hero a {
+    .profile-info, .contact-hero, .extra-buttons {
+      margin-bottom: 16px;
+    }
+    .profile-info span,
+    .contact-hero a,
+    .extra-buttons a {
       padding: 6px 10px;
       font-size: 14px;
     }
   }
 </style>
+
+<div class="profile-info">
+  <span>MBTI: INTJ</span>
+  <span>Year of Birth: 1991</span>
+  <span>Location: Seocho-gu, Gangnam City</span>
+</div>
 
 <div class="contact-hero">
   <a href="tel:010********" class="default">📞 010-5583-****</a>
